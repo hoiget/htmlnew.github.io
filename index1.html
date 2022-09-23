@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {padding: 0px; margin: auto;} 
+        .wrapper {width: 1089px;height: 800px;background-color: antiquewhite;border: double 3px black;}
+        header{width: 1089px;height: 150px;background-color: rgb(136, 103, 59);}
+        nav {width: 1089px;height: 50px;background-color: antiquewhite}
+        footer{width: 1089px;height: 100px;background-color: rgb(38, 28, 44);}
+        .content {width: 1083px;height: 494px;background-color: rgb(169, 110, 207);border: solid 3px crimson;}
+        aside{width: 35%;height: 500px;background-color: rgb(108, 230, 38);float: left;}
+        section{width: 65%;height: 500px;background-color: rgb(109, 98, 202);float: left;}
+        .menu li{ float: left;width: 170px;list-style: none;line-height: 50px;text-align: center;text-indent: 10px; background-color: antiquewhite;position:relative;}
+        li a{text-decoration: none;font-weight: bold;color: blue;}
+        li:hover{background-color: blue;}
+        li:hover>a{color: yellow;font-style: italic;}
+        li .sub-menu{display: none ;position: absolute;}
+        li:hover> .sub-menu{display: block;}
+        li .sub-menu li:hover> .sub-menu {top: 0px;left: 170px;}
+        span{line-height: 50px;}
+        nav span #fom1 button{border-radius: 50%;}
+        #frm{width: 100%;height: 500px;background-color: rgb(109, 98, 202);float: left;border-left: solid 3px crimson;}
+        #frm .lbt{float: left;line-height: 30px; }
+        #frm .inp{float: left;line-height: 30px;}
+        #frm .clear{clear: both;}
+
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+
+        </header>
+        <nav>
+            <ul class="menu">
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">SERVICES</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">COMPUTER</a></li>
+                        <li><a href="#">ADSL</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">5G</a></li>
+                                <li><a href="#">4G</a></li>
+                                <li><a href="#">3G</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">MOBIE PHONE</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">CONTACT</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">HELP</a></li>
+            </ul>
+            <span >
+                <form action="" method="get" id="fom1">
+                    <input type="text" placeholder="Search"> 
+                    <button>GO</button>
+                </form>
+            </span>
+        </nav>
+        <div class="content">
+            <aside>
+
+            </aside>
+            <section>
+                <form action="iuh.edu.vn" method="get" id="frm">
+                    <caption>FORM THONG TIN</caption>
+                    <fieldset>
+                        <legend>Thong tin sv</legend>
+                        <div class="lbt">
+                            <label for="lbttsv">Ho va ten:</label> <br>
+                            <label for="lbtmsv">Ma sinh vien:</label> <br>
+                            <label for="lbtgt">Gioi tinh:</label>
+                        </div>
+                        
+                        <div class="inp">
+                            <input type="text" placeholder="Ho va ten"> <br>
+                            <input type="text" placeholder="Ma sinh vien"> <br>
+                            <input type="radio" name="" id="">Nam
+                            <input type="radio" name="" id="">Nu
+                        </div>
+                        <div class="clear"></div>
+                        <center>
+                        <input type="button" value="Dang ki">
+                        <input type="reset" value="Thoat">
+                        </center>
+                    </fieldset>
+                </form>
+            </section>
+            
+        </div>
+        <footer>
+
+        </footer>
+    </div>
+</body>
+</html>
