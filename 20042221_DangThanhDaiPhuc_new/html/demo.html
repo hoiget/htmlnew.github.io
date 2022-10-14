@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Sap xep theo thu tu -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/scr.js"></script>
+    
+    <script>
+        $(document).ready(function() {
+            alert("Chao ban");
+            $("#txtHT").blur(function () {
+                var mauKT=/^[A-Z][a-zA-Z]+(\s[A-Z][a-zA-Z]+)*$/;
+            if ($("#txtHT").val()=="") 
+                alert("bat buoc nhap");
+            if (!mauKT.test($("#txtHT").val())) {
+                alert("Mau chu chua dung")
+            } else{alert("chuc mung nhap dung")}
+            });
+            
+            $("#txtMa").blur(function () {
+                var mauKT=/^[0-9]{8}$/;
+            if ($("#txtMa").val()=="") 
+                alert("bat buoc nhap");
+            if (!mauKT.test($("#txtMa").val())) {
+                alert("Mau chu chua dung")
+            } else{alert("chuc mung nhap dung")}
+            });
+
+            $("#txtQQ").blur(function () {
+                var mauKT=/^[A-Z][a-zA-Z]+(\s[A-Z][a-zA-Z]+)*$/;
+            if ($("#txtQQ").val()=="") 
+                alert("bat buoc nhap");
+            if (!mauKT.test($("#txtQQ").val())) {
+                alert("Mau chu chua dung")
+            } else{alert("chuc mung nhap dung")}
+            });  
+            
+            
+        });
+        
+    </script>
+</head>
+<body>
+    <div class="container" style="background-color: rgb(106, 207, 253) ;">
+        <div class="row" >
+            <form id="frm">
+                <div class="row" >
+                    <div class="col-4 col-sm-4">
+                        <label for="">Ho va ten:</label>
+                    </div>
+                    <div class="col-8 col-sm-8">
+                        <input type="text"  id="txtHT" class="form-control" placeholder="HO VA TEN">
+                    </div>
+                </div>
+                <br>
+                <div class="row" >
+                    <div class="col-4 col-sm-4">
+                        <label for="">Ma SV:</label>
+                    </div>
+                    <div class="col-8 col-sm-8">
+                        <input type="text"  id="txtMa" class="form-control" placeholder="Ma sinh vien">
+                    </div>
+                </div>
+                <br>
+                <div class="row" >
+                    <div class="col-4 col-sm-4">
+                        <label for="">Que quan:</label>
+                    </div>
+                    <div class="col-8 col-sm-8">
+                        <input type="text"  id="txtQQ" class="form-control" placeholder="Quequan">
+                    </div>
+                </div>
+                <br>
+                <div class="row" >
+                    <div class="col-sm-4"></div>
+                    <div class="col-8 col-sm-8">
+                        <input type="checkbox" name="" id="txtCH">Check
+                    </div>
+                    
+                </div>
+                <br>
+                <div class="row" >
+                    <div class="col-sm-4"></div>
+                    <div class="col-8 col-sm-8">
+                        <input type="submit" value="submit" >
+                        <input type="reset" value="reset">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
