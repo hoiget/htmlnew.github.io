@@ -1,1 +1,1 @@
-web: gunicorn official_lab_2:server
+web: gunicorn official_lab_v2:server
