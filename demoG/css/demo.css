@@ -1,0 +1,31 @@
+*{margin: auto;padding: 0px;}
+.wrapper{width: 1089px;height: 800px;border: 2px solid cadetblue;}
+header{width: 1089px;height: 150px;background-image: url(../img/Header.png);position: relative;}
+body{background-image: url(../img/backgound.jpg);}
+.menu li{float: left;list-style: none;text-align: center;background-color: blue;border: 1px solid rgb(87, 59, 16);
+display: flex;position: absolute;left: 100px;padding: 10px;font-size: 18px;width: 100px;}
+li a{text-decoration: none;font-style: italic;color: yellow;}
+.menu li:hover{background-color: yellow;width: 150px;height: 50px;}
+.menu li:hover>a{color: blue;}
+.menu li:nth-child(5){top: 90px;left: 740px;}
+.menu li:nth-child(4){top: 90px;left: 580px;}
+.menu li:nth-child(3){top: 90px;left: 420px;}
+.menu li:nth-child(2){top: 90px;left: 260px;}
+.menu li:nth-child(1){top: 90px;left: 100px;}
+#fomGO{position: absolute; left: 800px;top: 20px;}
+#fomGO #txts{border-radius: 30px;padding: 5px;font-style: italic;font-weight: bold;}
+#fomGO #btnGO{border-radius: 30px;padding: 5px;font-style: italic;font-weight: bold;background-color: antiquewhite;}
+.content{width: 1089px;height: 500px;border-top: 2px solid cadetblue;background-color: aliceblue;}
+aside{width: 40%;height: 500px;float: left;}
+section{width: 60%;height: 500px;float: left;}
+footer{width: 1089px;height: 150px;background-color:white;border-top: 1px solid cadetblue;}
+.text{width: 50%;height: 500px;float: left;}
+.form{width: 50%;height: 500px;float: left;display: inline;}
+.clear{clear: both;}
+.form .in{font-size: 20px;line-height: 20px;}
+h1{text-align: center;color: brown;}
+.menu-1 li a h2{text-decoration: none; text-align: center;color: brown;}
+.menu-1 li{list-style: none;}
+img:hover{transform: rotate(45deg);}
+#TEN{text-align: left;padding-top:50px ;margin-left: 10px;}
+#Lop{text-align: right;line-height: 50px;margin-right: 10px;}
