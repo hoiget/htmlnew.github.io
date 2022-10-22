@@ -8,7 +8,7 @@ body {
     background-color: #1761e0;
     height: 40px;
     padding: 16px 0 0 0;
-    
+    width: 1385px;
 }
 
 .header-name {
@@ -29,7 +29,7 @@ body {
     font-weight: bold;
     line-height: 20px;
     margin: 0 auto;
-   margin-left: 50px;
+   margin-left: 15px;
 }
 
 
@@ -38,7 +38,7 @@ body {
 .mywrapper {
     margin-right: auto;
     margin-left: auto;
-    width: 1450px;
+    width: 1390px;
     padding-right: 10px;
     padding-left: 10px;
     
@@ -51,7 +51,7 @@ body {
     float: left;
     padding: 10px;
     width: 670px;
-    margin-left: 30px;
+    margin-left: 0px;
 }
 .mycard1 {
     margin-bottom: 24px;
@@ -59,7 +59,7 @@ body {
     width: 330PX;
     height: 100px;
     float: left;
-    margin-left: 30px;
+    margin-left: 15px;
 }
 .menu {
     height: 112px;
