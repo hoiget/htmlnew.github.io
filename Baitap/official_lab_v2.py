@@ -40,7 +40,7 @@ labels={'YEAR_ID':'Năm',  'SALES':'DOANH SỐ'})
 figTiLeDongGopDanhSoTheoTungDoanhMuc = px.sunburst(df, path=['YEAR_ID', 'CATEGORY'], values='SALES',
 color='QUANTITYORDERED',
 labels={'parent':'Năm', 'labels':'Quý','QUANTITYORDERED':'Số lượng sản phẩm'},
-title='TỈ LỆ ĐÓNG GHÓP CỦA DOANH SỐ THEO DANH MỤC TRONG NĂM')
+title='TỈ LỆ ĐÓNG GHÓP CỦA DOANH SỐ THEO NĂM')
 
 
 
@@ -59,7 +59,7 @@ loiNhuanCaoNhat = df['Profit'].max().round(2)
 figTiLeDongGopLoiNhanTheoTungDoanhMuc = px.sunburst(df, path=['YEAR_ID', 'CATEGORY'], values='Profit',
 color='Profit',
 labels={'parent':'Năm', 'labels':'Quý','QUANTITYORDERED':'Số lượng sản phẩm'},
-title='TỈ LỆ ĐÓNG GHÓP CỦA LỢI NHUẬN THEO MỤC TRONG NĂM')
+title='TỈ LỆ ĐÓNG GHÓP CỦA LỢI NHUẬN THEO NĂM')
 
 
 figLoiNhanTheoNam = px.line(data_frame=df, x="YEAR_ID", y="Profit",  title='LỢI NHUẬN BÁN HÀNG THEO NĂM', color='Profit',
