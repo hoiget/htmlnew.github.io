@@ -31,7 +31,7 @@ df["QTR_ID"] = df["QTR_ID"].astype("str")
 
 # TRỰC QUAN HÓA DỮ LIỆU WEB APP
 app = Dash(__name__)
-
+server=app.server
 
 figDoanhSoTheoNam = px.bar(df, x="YEAR_ID", y="SALES",  title='DOANH SỐ BÁN HÀNG THEO NĂM', color='SALES',
 labels={'YEAR_ID':'Năm',  'SALES':'DOANH SỐ'})
