@@ -7,7 +7,6 @@
 # BẤM CTRL '+' C ĐỂ TẮT APP ĐANG CHẠY
 
 from dash import Dash, html, dcc
-from grpc import server
 import plotly.express as px
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -17,9 +16,9 @@ from firebase_admin import credentials, firestore
 
 # TẢI DỮ LIỆU TỪ FIRESTORE
 
-if not firebase_admin._apps:
-    cred = credentials.Certificate("./ltptdl1-be762-firebase-adminsdk-w85zh-92c7cbba4b.json")
-    app = firebase_admin.initialize_app(cred)
+
+cred = credentials.Certificate("./ltptdl1-be762-firebase-adminsdk-w85zh-92c7cbba4b.json")
+app = firebase_admin.initialize_app(cred)
 dbFIrestore = firestore.client()
 
 
@@ -32,7 +31,7 @@ df["QTR_ID"] = df["QTR_ID"].astype("str")
 
 
 
-df.dropna()
+
 # TRỰC QUAN HÓA DỮ LIỆU WEB APP
 app = Dash(__name__)
 
