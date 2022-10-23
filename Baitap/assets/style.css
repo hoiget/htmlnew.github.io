@@ -1,3 +1,4 @@
+
 body {
     font-family: "Lato", sans-serif;
     margin: 0;
@@ -9,6 +10,7 @@ body {
     height: 40px;
     padding: 16px 0 0 0;
     width: 1385px;
+    
 }
 
 .header-name {
@@ -32,13 +34,10 @@ body {
    margin-left: 15px;
 }
 
-
-
-
 .mywrapper {
     margin-right: auto;
     margin-left: auto;
-    width: 1390px;
+    width: 1385px;
     padding-right: 10px;
     padding-left: 10px;
     
@@ -52,6 +51,7 @@ body {
     padding: 10px;
     width: 670px;
     margin-left: 0px;
+    
 }
 .mycard1 {
     margin-bottom: 24px;
@@ -59,7 +59,7 @@ body {
     width: 330PX;
     height: 100px;
     float: left;
-    margin-left: 15px;
+    padding-left: 15px;
 }
 .menu {
     height: 112px;
@@ -95,6 +95,7 @@ body {
     .header,.header-name,.header-title,.menu,.menu-title,.mycard,.mycard1,.mywrapper,.Select--multi,.Select--single,.Select-control,.Select-placeholder,
     .Select-value,.Select-value-label,.so{
         width: 100%;
+        float: left;
     }
 }
  
@@ -109,6 +110,7 @@ body {
     .header,.header-name,.header-title,.menu,.menu-title,.mycard,.mycard1,.mywrapper,.Select--multi,.Select--single,.Select-control,.Select-placeholder,
     .Select-value,.Select-value-label,.so{
         width: 100%;
+        float: left;
     }
   }
   
@@ -123,6 +125,7 @@ body {
     .header,.header-name,.header-title,.menu,.menu-title,.mycard,.mycard1,.mywrapper,.Select--multi,.Select--single,.Select-control,.Select-placeholder,
     .Select-value,.Select-value-label,.so{
         width: 100%;
+        float: left;
     }
   }
    /* 
@@ -137,6 +140,7 @@ body {
     .Select-value,.Select-value-label,.so{
         width: 100%;
     }
+    
   }
   
   /* 
