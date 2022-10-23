@@ -6,29 +6,28 @@
 
 # BẤM CTRL '+' C ĐỂ TẮT APP ĐANG CHẠY
 
+from re import X
 from dash import Dash, html, dcc
 import plotly.express as px
-import matplotlib.pyplot as plt
-import seaborn as sns
 import pandas as pd
 import firebase_admin
 from firebase_admin import credentials, firestore
 
+
 # TẢI DỮ LIỆU TỪ FIRESTORE
-
-
 cred = credentials.Certificate("./ltptdl1-be762-firebase-adminsdk-w85zh-92c7cbba4b.json")
-app = firebase_admin.initialize_app(cred)
-dbFIrestore = firestore.client()
+appLoadData = firebase_admin.initialize_app(cred)
 
+dbFireStore = firestore.client()
 
-QueryResult = list(dbFIrestore.collection("tbl20040581").stream())
-listQurey = list(map(lambda x : x.to_dict(), QueryResult))
-df = pd.DataFrame(listQurey)
-df = pd.read_csv('orginal_sales_data_edit.csv')
+queryResults = list(dbFireStore.collection(u'tbl20040581').where(u'DEALSIZE', u'==', 'Large').stream())
+listQueryResult = list(map(lambda x: x.to_dict(), queryResults))
+
+df = pd.DataFrame(listQueryResult)
+df=pd.read_csv("orginal_sales_data_edit.csv")
+
 df["YEAR_ID"] = df["YEAR_ID"].astype("str")
 df["QTR_ID"] = df["QTR_ID"].astype("str")
-
 
 
 
