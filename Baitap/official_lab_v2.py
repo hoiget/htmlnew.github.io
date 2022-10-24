@@ -73,7 +73,7 @@ app.layout = html.Div(
                     children="XÂY DỰNG DANH MỤC SẢN PHẨM TIỀM NĂNG", className="header-title"
                 ),
                 html.H1(
-                    children="DATA DASHBOARD-20042221_Đặng Thanh Đại Phúc", className="header-title"
+                    children="IUH-20042221_Đặng Thanh Đại Phúc", className="header-title"
                 ),
               
             ],
