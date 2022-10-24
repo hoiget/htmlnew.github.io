@@ -62,8 +62,13 @@ labels={'parent':'Năm', 'labels':'Quý','QUANTITYORDERED':'Số lượng sản 
 title='TỈ LỆ ĐÓNG GÓP CỦA LỢI NHUẬN THEO TỪNG DANH MỤC TRONG TỪNG NĂM')
 
 
-figLoiNhanTheoNam = px.line(data_frame=df, x="YEAR_ID", y="Profit",  title='LỢI NHUẬN BÁN HÀNG THEO NĂM', color='Profit',
-labels={'YEAR_ID':'NĂM',  'Profit':'LỢI NHUẬN'})
+lnvalue = df[['YEAR_ID','Profit']].groupby('YEAR_ID').sum()
+listValueLoiNhan = list(lnvalue.to_dict().values())
+year = listValueLoiNhan[0].keys()
+values_loiNhan = listValueLoiNhan[0].values()
+bd2 = pd.DataFrame({'YEAR': year,'LoiNhuan': values_loiNhan})
+figLoiNhanTheoNam = px.line(bd2, x="YEAR", y="LoiNhuan", title='LỢI NHUẬN BÁN HÀNG THEO NĂM', labels={'YEAR':'Năm',  'LoiNhuan':'Lợi nhuận'})
+
 
 app.layout = html.Div(
     children=[
