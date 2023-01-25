@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<!-- Coding by CodingLab | www.codinglabweb.com-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Dynamic Digital Clock | CodingLab </title>
+    <link rel="stylesheet" href="../css/style.css">
+    
+    
+    
+    <!----===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../css/clock.css">
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+   </head>
+<body>
+  <nav class="sidebar close">
+    <header>
+        <div class="image-text">
+            <span class="image">
+                <img src="../img/logo.png" alt="">
+            </span>
+
+            <div class="text logo-text">
+                <span class="name">Codinglab</span>
+                <span class="profession">Web developer</span>
+            </div>
+        </div>
+
+        <i class='bx bx-chevron-right toggle'></i>
+    </header>
+
+    <div class="menu-bar">
+        <div class="menu">
+
+            <li class="search-box">
+                <i class='bx bx-search icon'></i>
+                <input type="text" placeholder="Search...">
+            </li>
+
+            <ul class="menu-links">
+                <li class="nav-link">
+                    <a href="../html/index.html">
+                        <i class='bx bx-home-alt icon' ></i>
+                        <span class="text nav-text">Dashboard</span>
+                    </a>
+                </li>
+
+                <li class="nav-link">
+                    <a href="../html/otp.html">
+                        <i class='bx bx-bar-chart-alt-2 icon' ></i>
+                        <span class="text nav-text">Revenue</span>
+                    </a>
+                </li>
+
+                <li class="nav-link">
+                    <a href="../html/clock.html">
+                        <i class='bx bx-bell icon'></i>
+                        <span class="text nav-text">Notifications</span>
+                    </a>
+                </li>
+
+                <li class="nav-link">
+                    <a href="#">
+                        <i class='bx bx-pie-chart-alt icon' ></i>
+                        <span class="text nav-text">Analytics</span>
+                    </a>
+                </li>
+
+                <li class="nav-link">
+                    <a href="../html/card.html">
+                        <i class='bx bx-heart icon' ></i>
+                        <span class="text nav-text">Likes</span>
+                    </a>
+                </li>
+
+                <li class="nav-link">
+                    <a href="#">
+                        <i class='bx bx-wallet icon' ></i>
+                        <span class="text nav-text">Wallets</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="bottom-content">
+            <li class="">
+                <a href="../html/logout.html">
+                    <i class='bx bx-log-out icon' ></i>
+                    <span class="text nav-text">Logout</span>
+                </a>
+            </li>
+
+            <li class="mode">
+                <div class="sun-moon">
+                    <i class='bx bx-moon icon moon'></i>
+                    <i class='bx bx-sun icon sun'></i>
+                </div>
+                <span class="mode-text text">Dark mode</span>
+
+                <div class="toggle-switch">
+                    <span class="switch"></span>
+                </div>
+            </li>
+            
+        </div>
+    </div>
+
+</nav>
+  <section class="home">
+    <div class="container">
+      <div class="icons">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+      </div>
+      <div class="time">
+        <div class="time-colon">
+          <div class="time-text">
+            <span class="num hour_num">08</span>
+            <span class="text">Hours</span>
+          </div>
+          <span class="colon">:</span>
+        </div>
+        <div class="time-colon">
+          <div class="time-text">
+            <span class="num min_num">45</span>
+            <span class="text">Minutes</span>
+          </div>
+          <span class="colon">:</span>
+        </div>
+        <div class="time-colon">
+          <div class="time-text">
+            <span class="num sec_num">06</span>
+            <span class="text">Seconds</span>
+          </div>
+          <span class="am_pm">AM</span>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <script>
+  let section = document.querySelector("section"),
+  icons = document.querySelector(".icons");
+
+  icons.onclick = ()=>{
+    section.classList.toggle("dark");
+  }
+
+  // creating a function and calling it in every seconds
+  setInterval(()=>{
+
+    let date = new Date(),
+    hour = date.getHours(),
+    min = date.getMinutes(),
+    sec = date.getSeconds();
+
+    let d;
+    d = hour < 12 ? "AM" : "PM"; //if hour is smaller than 12, than its value will be AM else its value will be pm
+    hour = hour > 12 ? hour - 12 : hour; //if hour value is greater than 12 than 12 will subtracted ( by doing this we will get value till 12 not 13,14 or 24 )
+    hour = hour == 0 ? hour = 12 : hour; // if hour value is  0 than it value will be 12
+
+    // adding 0 to the front of all the value if they will less than 10
+    hour = hour < 10 ? "0" + hour : hour;
+    min = min < 10 ? "0" + min : min;
+    sec = sec < 10 ? "0" + sec : sec;
+
+    document.querySelector(".hour_num").innerText = hour;
+    document.querySelector(".min_num").innerText = min;
+    document.querySelector(".sec_num").innerText = sec;
+    document.querySelector(".am_pm").innerText = d;
+
+  }, 1000); // 1000 milliseconds = 1s
+
+  </script>
+   <script src="../js/script.js"></script>
+
+</body>
+</html>
